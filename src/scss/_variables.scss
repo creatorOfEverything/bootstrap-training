@@ -1,0 +1,101 @@
+// Breakpoits ======================================================================
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$grid-breakpoints: (
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl
+) !default;
+
+// Grid ======================================================================
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+// Optional settings ======================================================================
+
+$spacer: 1rem;
+// $enable-rounded: true;
+// $enable-shadows: true;
+// $enable-gradients: true;
+// $enable-transitions: true;
+// $enable-prefers-reduced-motion-media-query:	true;
+// $enable-caret: true;
+// $enable-pointer-cursor-for-buttons:	true;
+// $enable-print-styles:	true;
+$enable-responsive-font-sizes: true;
+// $enable-validation-icons:	true;
+$enable-deprecation-messages: true;
+
+// Colors ======================================================================
+
+$gray-100: #f8f9fa !default;
+$gray-200: #eee !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #868686 !default;
+$gray-600: rgb(37, 10, 10) !default;
+$gray-700: #495057 !default;
+$gray-800: #333 !default;
+$gray-900: #2d2d2d !default;
+$black: #000 !default;
+
+$white: #fff !default;
+$dark-brown: #a9946e !default;
+$transparent: transparent;
+
+$primary: transparent;
+
+// Links ======================================================================
+
+$link-color: $gray-500 !default;
+
+// Fonts ======================================================================
+
+$body-font-family: "Arial", sans !default;
+
+$headings-color: $black !default;
+
+// Navbar ======================================================================
+
+$navbar-toggler-color: $dark-brown !default;
+$navbar-dark-color: #888887 !default;
+$navbar-dark-hover-color: $white !default;
+$navbar-dark-toggler-border-color: $transparent;
+
+//Buttons ======================================================================
+
+$border-width: 2px;
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+
+  @return $string;
+}
+
+$custom-select-indicator-color: $dark-brown !default;
+$custom-select-indicator: str-replace(
+  url('data:image/svg+xml;utf8,<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve"><g><path style="fill:#{$custom-select-indicator-color}" d="M8,13l8-10H0L8,13z"/></g></svg>'),
+  "#",
+  "%23"
+) !default;
+$custom-select-border-width: 0;
+$custom-select-border-radius: 0;
+$custom-select-bg: transparent;
+$custom-select-color: $gray-500;

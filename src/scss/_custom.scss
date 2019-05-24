@@ -1,0 +1,13 @@
+// Navbar ======================================================================
+
+.navbar {
+  &-nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+  }
+}

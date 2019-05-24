@@ -1,0 +1,40 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+// @import "_functions.scss";
+// @import "_extends.scss";
+@import "_sprites.scss";
+// @import "../../node_modules/magnific-popup/src/css/_setting.scss";
+// @import "../../node_modules/magnific-popup/src/css/_main.scss";
+// @import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "_bootstrap.scss";
+
+body {
+  font-family: $body-font-family;
+  height: 2000px;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.text {
+  font-size: 1em;
+}
+
+.upper-block {
+  height: 100vh;
+
+  &__slider-c {
+    position: relative;
+  }
+
+  &__images {
+    display: flex;
+  }
+
+  &__img {
+    flex: 0 1 50%;
+    display: block;
+    max-width: 100%;
+  }
+}
